@@ -40,7 +40,6 @@ projectfi
 sheets
 slides
 street
-translate
 zhuyin"
 
 gappsstock="allo
@@ -49,6 +48,7 @@ duo
 googlepay
 hangouts
 keyboardgoogle
+translate
 vrservice
 wallpapers"
 
