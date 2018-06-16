@@ -1686,7 +1686,7 @@ else
 fi;
 
 # Prepare list of AOSP/ROM files that will be deleted using gapps-config
-# We will look for +Browser, +CameraStock, +DialerStock, +Email, +Gallery, +Launcher, +MMS, +PicoTTS and more to prevent their removal
+# We will look for +Browser, +CameraStock, +ContactsStock, +DialerStock, +Email, +Gallery, +Launcher, +MMS, +PicoTTS and more to prevent their removal
 set_progress 0.03;
 if [ "$g_conf" ]; then
   for default_name in $default_stock_remove_list; do
@@ -1780,6 +1780,12 @@ fi;
 # If $device_type is not a 'phone' make certain we're not installing dialerframework (implies no dialergoogle)
 if ( contains "$gapps_list" "dialerframework" ) && [ $device_type != "phone" ]; then
   gapps_list=${gapps_list/dialerframework}; # we'll prevent dialerframework from being installed since this isn't a phone
+fi;
+
+# If we're NOT installing contactsgoogle make certain 'contactsstock' is NOT in $aosp_remove_list UNLESS 'contactsstock' is in $g_conf
+if ( ! contains "$gapps_list" "contactsgoogle" ) && ( ! grep -qiE '^contactsstock$' "$g_conf" ); then
+  aosp_remove_list=${aosp_remove_list/contactsstock};
+  remove_contactsstock="false[NO_ContactsGoogle]";
 fi;
 
 # If we're NOT installing dialerframework then we MUST REMOVE dialergoogle from  $gapps_list (if it's currently there)
@@ -1924,11 +1930,6 @@ fi;
 # If we're installing calculatorgoogle we MUST ADD calculatorstock to $aosp_remove_list (if it's not already there)
 if ( contains "$gapps_list" "calculatorgoogle" ) && ( ! contains "$aosp_remove_list" "calculatorstock" ); then
   aosp_remove_list="${aosp_remove_list}calculatorstock"$'\n';
-fi;
-
-# If we're installing contactsgoogle we MUST ADD contactsstock to $aosp_remove_list (if it's not already there)
-if ( contains "$gapps_list" "contactsgoogle" ) && ( ! contains "$aosp_remove_list" "contactsstock" ); then
-  aosp_remove_list="${aosp_remove_list}contactsstock"$'\n';
 fi;
 
 # If we're installing packageinstallergoogle we MUST ADD packageinstallerstock to $aosp_remove_list (if it's not already there)
@@ -2106,6 +2107,7 @@ log "Config Type" "$config_type";
 log "Using gapps-config" "$config_file";
 log "Remove Stock/AOSP Browser" "$remove_browser";
 log "Remove Stock/AOSP Camera" "$remove_camerastock";
+log "Remove Stock/AOSP Contacts" "$remove_contactsstock";
 log "Remove Stock/AOSP Dialer" "$remove_dialerstock";
 log "Remove Stock/AOSP Email" "$remove_email";
 log "Remove Stock/AOSP Gallery" "$remove_gallery";
