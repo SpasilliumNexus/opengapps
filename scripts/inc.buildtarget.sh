@@ -233,6 +233,7 @@ get_package_info(){
     androidplatformservices)  if [ "$API" -eq "26" ]; then # This app (com.google.android.gms.policy_sidecar_o) is only found in Android 8.0 for the Pixel 2
                                packagetype="Core"; packagename="com.google.android.gms.policy_sidecar_o"; packagetarget="priv-app/AndroidPlatformServices"
                               fi;;
+    arcore)                   packagetype="Core"; packagename="com.google.ar.core"; packagetarget="app/arcore";;
     batteryusage)             packagetype="Core"; packagename="com.google.android.apps.turbo"; packagetarget="priv-app/Turbo";;
     gmscore)                  packagetype="Core"; packagename="com.google.android.gms"; packagetarget="priv-app/PrebuiltGmsCore";;  # Alternative path on Android One 7.0 is priv-app/GmsCore
     gmssetup)                 packagetype="Core"; packagename="com.google.android.gms.setup"; packagetarget="priv-app/GmsCoreSetupPrebuilt";;
