@@ -497,7 +497,7 @@ webviewstub"
 
     # Only install ARCore on an ARM64 device running Android 7.0 or newer
   if [ "$API" -ge "24" ] && [ "$ARCH" = "arm64" ]; then
-    gappscore="$gappscore
+    gappsstock="$gappsstock
 arcore"
   fi
 
