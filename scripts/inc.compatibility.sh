@@ -515,8 +515,11 @@ api25hack(){
     gappsnano="$gappsnano
 batteryusage"
     gappsmicro="$gappsmicro
-pixelicons
 pixellauncher" # Only install Pixel Launcher and icons on Android 7.1 and newer
+  fi
+  if [ "$API" -eq "25" ]; then
+    gappsmicro="$gappsmicro
+pixelicons"
   fi
 }
 
