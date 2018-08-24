@@ -556,13 +556,13 @@ api27hack(){
 api28hack(){
   if [ "$API" -ge "28" ]; then
     if [ "$ARCH" = "arm64" ]; then  # for now only available on arm64
-      gappssuper="$gappssuper
+      gappsstock="$gappsstock
 markup"
     fi
     gappscore="$gappscore
 androidplatformservices
 datatransfertool"
-    gappssuper="$gappssuper
+    gappsstock="$gappsstock
 actionsservices
 bettertogether
 soundpicker
