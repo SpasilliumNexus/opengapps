@@ -192,7 +192,7 @@ form(
       "Talkback",     "<b>Talkback</b>",       "",                      "check",
       "Translate",     "<b>Google Translate</b>",       "",                      "check",
       "VRService",     "<b>Google VR Service</b>",       "",                      "check",
-      "Wallpapers",     "<b>Wallpapers</b>",       "To Exclude BOTH Wallpapers AND Pixel Launcher <#f00>OR</#> To Include Wallpapers",                      "check",
+      "Wallpapers",     "<b>Google Wallpapers</b>",       "To Exclude BOTH Google Wallpapers AND Pixel Launcher <#f00>OR</#> To Include Wallpapers",                      "check",
       "WebViewGoogle",     "<b>Android System WebView</b>",       "",                      "check",
       "Wellbeing",     "<b>Digital Wellbeing</b>",       "requires Android 9.0 (API Level 28) or higher",                      "check",
       "YouTube",     "<b>YouTube</b>",       "",                      "check",
@@ -284,6 +284,7 @@ form(
       "Terminal",     "<b>Terminal</b>",       "",                      "check",
       "Themes",     "<b>CyanogenMod Theme Engine</b>",       "(Will break the link in Settings to Themes!)",                      "check",
       "VisualizationWallpapers",     "<b>Visualization Live Wallpaper</b>",       "",                      "check",
+      "WallpapersStock",     "<b>Stock Wallpaper Picker</b>",       "(automatically removed when Google Wallpapers is installed)",                      "check",
       "WhisperPush",     "<b>WhisperPush</b>",       "",                      "check"
 );
 form(
@@ -1101,6 +1102,12 @@ if
   prop("rem.prop", "VisualizationWallpapers")=="1"
 then
   appendvar("gapps", "VisualizationWallpapers\n");
+endif;
+
+if
+  prop("rem.prop", "WallpapersStock")=="1"
+then
+  appendvar("gapps", "WallpapersStock\n");
 endif;
 
 if
