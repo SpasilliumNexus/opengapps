@@ -517,6 +517,10 @@ googlenow"
 }
 
 api25hack(){
+  if [ "$API" -eq "25" ]; then
+    gappscore="$gappscore
+gsflogin"
+  fi
   if [ "$API" -ge "25" ]; then
     gappsnano="$gappsnano
 batteryusage"
@@ -541,9 +545,6 @@ androidplatformservices"
 setupwraith
 tvlauncher
 tvrecommendations"
-  else
-    gappscore="$gappscore
-gsflogin"
   fi
 }
 
