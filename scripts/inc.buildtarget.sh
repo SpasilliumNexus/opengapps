@@ -256,6 +256,7 @@ get_package_info(){
                               fi;;
     setupwizardtablet)        packagetype="Core"; packagename="com.google.android.setupwizard.tablet"; packagetarget="priv-app/SetupWizard";;
     vending)                  packagetype="Core"; packagename="com.android.vending"; packagetarget="priv-app/Phonesky";;
+    wellbeing)                packagetype="Core"; packagename="com.google.android.apps.wellbeing"; packagetarget="priv-app/WellbeingPrebuilt";;
 
     actionsservices)          packagetype="GApps"; packagename="com.google.android.as"; packagetarget="priv-app/MatchmakerPrebuilt";;
     arcore)                   packagetype="GApps"; packagename="com.google.ar.core"; packagetarget="app/arcore";;
@@ -368,7 +369,6 @@ get_package_info(){
                                 packagefiles="etc/permissions/com.google.vr.platform.xml etc/sysconfig/google_vr_build.xml"; packageframework="com.google.vr.platform.jar"
                               fi;;
     wallpapers)               packagetype="GApps"; packagename="com.google.android.apps.wallpaper"; packagetarget="app/WallpaperPickerGooglePrebuilt";;
-    wellbeing)                packagetype="GApps"; packagename="com.google.android.apps.wellbeing"; packagetarget="priv-app/WellbeingPrebuilt";;
     youtube)                  packagetype="GApps"; packagename="com.google.android.youtube"; packagetarget="app/YouTube";;
     zhuyin)                   packagetype="GApps"; packagename="com.google.android.apps.inputmethod.zhuyin"; packagetarget="app/GoogleZhuyinIME";;  # also ZhuyinIME exists on some ROMs
 

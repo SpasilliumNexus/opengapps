@@ -568,12 +568,12 @@ markup"
     fi
     gappscore="$gappscore
 androidplatformservices
-datatransfertool"
+datatransfertool
+wellbeing"
     gappsstock="$gappsstock
 actionsservices
 bettertogether
-soundpicker
-wellbeing"
+soundpicker"
   fi
 }
 
