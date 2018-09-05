@@ -541,6 +541,7 @@ api26hack(){
   if [ "$API" -eq "26" ]; then
     if [ "$ARCH" = "arm64" ]; then  # for now only available on arm64
       gappscore="$gappscore
+gmssetup
 androidplatformservices"
     fi
     # On Oreo and higher a different launcher exists
@@ -556,7 +557,8 @@ tvrecommendations"
 api27hack(){
   if [ "$API" -eq "27" ]; then
     if [ "$ARCH" = "arm64" ]; then  # for now only available on arm64
-      gappscore="$gappscore"
+      gappscore="$gappscore
+gmssetup"
     fi
   else
     gappscore="$gappscore"
