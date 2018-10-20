@@ -835,6 +835,12 @@ then
 endif;
 
 if
+  prop("rem.prop", "LRecorder")=="1"
+then
+  appendvar("gapps", "LRecorder\n");
+endif;
+
+if
   prop("rem.prop", "LSetupWizard")=="1"
 then
   appendvar("gapps", "LSetupWizard\n");
