@@ -250,7 +250,7 @@ createzip() {
   if [ -n "$OUTFILE" ]; then
     signedzip="$( eval "echo \"$OUTFILE\"")"
   else
-    signedzip="$OUTFOLDER/open_gapps-$ARCH-$PLATFORM-$VARIANT-$DATE-UNOFFICIAL.zip"
+    signedzip="$OUTFOLDER/open_gapps-$ARCH-$PLATFORM-$VARIANT-$DATE-unofficial.zip"
   fi
 
   if [ -f "$unsignedzip" ]; then
