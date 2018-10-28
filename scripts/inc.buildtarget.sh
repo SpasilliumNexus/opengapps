@@ -34,7 +34,6 @@ gcs
 indic
 japanese
 korean
-newswidget
 pinyin
 projectfi
 sheets
