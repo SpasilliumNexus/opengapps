@@ -348,6 +348,8 @@ get_package_info(){
     packageinstallergoogle)   packagetype="GApps"; packagename="com.google.android.packageinstaller"; packagetarget="priv-app/GooglePackageInstaller";;
     pixelicons)               packagetype="GApps"; packagename="com.google.android.nexusicons"; packagetarget="app/NexusLauncherIcons";;
     pixellauncher)            packagetype="GApps"; packagename="com.google.android.apps.nexuslauncher"; packagetarget="priv-app/NexusLauncherPrebuilt";;
+    pixelwallpapers)          packagetype="GApps"; packagename="com.breel.wallpapers18"; packagetarget="app/WallpapersBReel2018";;
+    pixelwallpapersstub)      packagetype="GApps"; packagename="com.google.android.apps.wallpaper.nexus"; packagetarget="app/NexusWallpapersStubPrebuilt2018";;
     photos)                   packagetype="GApps"; packagename="com.google.android.apps.photos"; packagetarget="app/Photos";;
     photosvrmode)             packagetype="GApps"; packagename="com.google.android.apps.photos.vrmode"; packagetarget="app/Photos";;
     pinyin)                   packagetype="GApps"; packagename="com.google.android.inputmethod.pinyin"; packagetarget="app/GooglePinyinIME";;

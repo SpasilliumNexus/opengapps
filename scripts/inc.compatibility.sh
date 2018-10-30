@@ -577,6 +577,8 @@ api28hack(){
     if [ "$ARCH" = "arm64" ]; then  # for now only available on arm64
       gappscore="$gappscore
 markup"
+      gappsstock="$gappsstock
+pixelwallpapers"
     fi
     gappscore="$gappscore
 androidplatformservices
@@ -585,7 +587,8 @@ soundpicker
 wellbeing"
     gappsstock="$gappsstock
 actionsservices
-bettertogether"
+bettertogether
+pixelwallpapersstub"
   fi
 }
 
