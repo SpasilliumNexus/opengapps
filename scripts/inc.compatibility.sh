@@ -582,7 +582,6 @@ pixelwallpapers"
     fi
     gappscore="$gappscore
 androidplatformservices
-datatransfertool
 soundpicker
 wellbeing"
     gappsstock="$gappsstock
