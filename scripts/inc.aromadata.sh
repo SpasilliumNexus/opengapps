@@ -131,7 +131,7 @@ form(
 
     "gapps",     "Choose GApps which you want to add on install/exclude list",        "",                                         "group",
       "ActionsServices",     "<b>Actions Services</b>",       "requires Android 9.0 (API Level 28) or higher",                      "check",
-      "ARCore",     "<b>Device Health Services</b>",       "(ARM64 only) requires Android 7.0 (API Level 24) or higher",                      "check",
+      "ARCoreStub",     "<b>ARCore (Stub)</b>",       "(ARM64 only) requires Android 7.0 (API Level 24) or higher",                      "check",
       "BatteryUsage",     "<b>Device Health Services</b>",       "requires Android 7.1 (API Level 25) or higher",                      "check",
       "BetterTogether",     "<b>Better Together</b>",       "requires Android 9.0 (API Level 28) or higher",                      "check",
       "Books",     "<b>Google Play Books</b>",       "",                      "check",
@@ -370,9 +370,9 @@ then
 endif;
 
 if
-  prop("gapps.prop", "ARCore")=="1"
+  prop("gapps.prop", "ARCoreStub")=="1"
 then
-  appendvar("gapps", "ARCore\n");
+  appendvar("gapps", "ARCoreStub\n");
 endif;
 
 if
