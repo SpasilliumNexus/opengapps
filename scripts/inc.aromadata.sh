@@ -175,7 +175,9 @@ form(
       "PackageInstallerGoogle",     "<b>Google PackageInstaller</b>",       "",                      "check",
       "Pinyin",     "<b>Google Pinyin Input</b>",       "",                      "check",
       "PixelIcons",     "<b>Pixel Icons</b>",       "",                      "check",
-      "PixelLauncher",     "<b>Pixel Launcher</b>",       "(Wallpapers and Google Search Required)",                      "check",
+      "PixelLauncher",     "<b>Pixel Launcher</b>",       "(Wallpapers and Google Search Required)", 
+      "PixelWallpapers",     "<b>Pixel Wallpapers 18</b>",       "requires ARM64, Android 9.0 (API Level 28) or higher, and Wallpapers)", 
+      "PixelWallpapersStub",     "<b>Google Wallpaper Images</b>",       "requires Android 9.0 (API Level 28) or higher and Wallpapers)",                      "check",
       "Photos",     "<b>Google Photos</b>",       "",                      "check",
       "PlayGames",     "<b>Google Play Games</b>",       "",                      "check",
       "PrintServiceGoogle",     "<b>Print Service Recommendation Service</b>",       "",                      "check",
@@ -635,6 +637,18 @@ if
   prop("gapps.prop", "PixelLauncher")=="1"
 then
   appendvar("gapps", "PixelLauncher\n");
+endif;
+
+if
+  prop("gapps.prop", "PixelWallpapers")=="1"
+then
+  appendvar("gapps", "PixelWallpapers\n");
+endif;
+
+if
+  prop("gapps.prop", "PixelWallpapersStub")=="1"
+then
+  appendvar("gapps", "PixelWallpapersStub\n");
 endif;
 
 if
