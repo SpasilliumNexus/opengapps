@@ -524,6 +524,8 @@ webviewstub"  # On Nougat and higher we might want to install the WebViewStub in
 moviesvrmode"
   fi
   if [ "$ARCH" = "arm64" ]; then  # for now only available on arm64
+    gappsstock="$gappsstock
+arcorestub"
     gappsmini_optional="$gappsmini_optional
 photosvrmode"
   fi

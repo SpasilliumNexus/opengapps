@@ -132,6 +132,7 @@ form(
     "gapps",     "Choose GApps which you want to add on install/exclude list",        "",                                         "group",
       "ActionsServices",     "<b>Actions Services</b>",       "Requires Android 9.0 or later",                      "check",
       "AndroidAuto",     "<b>Android Auto</b>",       "Requires Android 5.0 or later",                      "check",
+      "ARCoreStub",     "<b>ARCore (Stub)</b>",       "Requires an ARM64 device with Android 7.0 or later",                      "check",
       "BatteryUsage",     "<b>Device Health Services</b>",       "Requires Android 7.1 or later",                      "check",
       "BetterTogether",     "<b>Better Together</b>",       "Requires Android 9.0 or later",                      "check",
       "Books",     "<b>Google Play Books</b>",       "",                      "check",
