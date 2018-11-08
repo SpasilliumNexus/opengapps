@@ -563,13 +563,13 @@ tvrecommendations"  # On Android 8.0+ a different launcher exists. SuW also work
   fi
 }
 
-# Does nothing now, here for completeness
 api27hack(){
-  if [ "$API" -eq "27" ]; then
+  if [ "$API" -ge "27" ]; then
     if [ "$ARCH" = "arm64" ]; then  # for now only available on arm64
       gappscore="$gappscore"
     fi
-    gappscore="$gappscore"
+    gappscore="$gappscore
+soundpicker"
   fi
 }
 
@@ -580,8 +580,6 @@ api28hack(){
 markup
 platformservicespie"  # Include Markup and Pie-specific Android Platform Services with Android 9.0
     fi
-    gappscore="$gappscore
-soundpicker"
     gappsnano="$gappsnano
 wellbeing"
     gappssuper="$gappssuper
