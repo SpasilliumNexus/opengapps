@@ -580,6 +580,8 @@ api28hack(){
 markup
 platformservicespie"  # Include Markup and Pie-specific Android Platform Services with Android 9.0
     fi
+    gappscore="$gappscore
+backuprestore"
     gappsnano="$gappsnano
 wellbeing"
     gappssuper="$gappssuper
